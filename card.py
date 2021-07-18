@@ -1,6 +1,6 @@
 class Card:
-    suits = ["пика", "черва", "бубна", "треф"]
-    values = [None, None, "2", "3",
+    _suits = ["пика", "черва", "бубна", "треф"]
+    _values = [None, None, "2", "3",
               "4", "5", "6", "7", "8", "9",
               "10", "валет", "дама", "король", "туз"]
 
@@ -9,7 +9,7 @@ class Card:
         self.value = v
 
     def __repr__(self):
-        v = self.suits[self.suit] + " " + self.values[self.value]
+        v = self._suits[self.suit] + " " + self._values[self.value]
         return v
 
     def __lt__(self, c2):
